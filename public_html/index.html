@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>スワイプイベント</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="js/libs/jquery-mobile/jquery.mobile.min.css">
+    </head>
+    <body>
+
+        <div data-role="page" id="page1">
+
+            <div data-role="header">
+                <h1>スワイプイベント</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                    <button>ここを左右にスワイプしてください(1)</button>
+                    <button>ここを左右にスワイプしてください(2)</button>
+                    <button>ここを左右にスワイプしてください(3)</button>
+                    <button>ここを左右にスワイプしてください(4)</button>
+                    <button>ここを左右にスワイプしてください(5)</button>
+                    <button>ここを左右にスワイプしてください(6)</button>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>ページフッタ(footer)</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->        
+
+
+        <script src="js/libs/jquery/jquery.min.js"></script>
+        <script src="js/libs/jquery-mobile/jquery.mobile.min.js"></script>
+        
+        <script>
+            $( document ).on( "swipeleft swiperight", "button", function( event ) {
+                $(this).text("削除中...").fadeOut();
+            });
+            </script>
+    </body>
+</html>
